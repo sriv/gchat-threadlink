@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "GChat ThreadLink",
+  "version": "1.0",
+
+  "description": "Adds a permalink to all chat threads.",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gchat_permalink@example.com"
+    }
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://chat.google.com/*"],
+      "js": ["thread-link.js"]
+    }
+  ]
+}
